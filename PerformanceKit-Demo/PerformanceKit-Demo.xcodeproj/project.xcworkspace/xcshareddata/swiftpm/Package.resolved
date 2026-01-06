@@ -1,0 +1,15 @@
+{
+  "originHash" : "2243ca0e3725594eb24418fe3e2ff2773eae6ac7360522f7dc20bb29c29061ab",
+  "pins" : [
+    {
+      "identity" : "performancekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nazar-41/PerformanceKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b5ca20776d91a2e0a692a1fa06948a3f55c22267"
+      }
+    }
+  ],
+  "version" : 3
+}
