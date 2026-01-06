@@ -1,4 +1,34 @@
-# PerformanceKit
+<div align="center">
+  <h1>PerformanceKit</h1>
+  <p><em>Real-time performance monitoring framework for SwiftUI apps</em></p>
+</div>
+
+
+
+
+
+
+
+
+
+<p align="center">
+  <table align="center">
+    <tr>
+      <td align="center">
+        <img width="280" height="610" alt="Preview" src="https://github.com/user-attachments/assets/9c9383de-115a-442e-9ca4-3561103d0bb1" />
+      </td>
+      <td align="center">
+        <img width="280" height="610" alt="Demo Video" src="https://github.com/user-attachments/assets/42a6a757-0acd-4ec2-ab36-2f34a5853e42" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><em>Screenshot</em></td>
+      <td align="center"><em>Demo Video</em></td>
+    </tr>
+  </table>
+</p>
+
+
 
 A comprehensive performance monitoring framework for iOS, macOS, tvOS, and watchOS applications. PerformanceKit provides real-time monitoring of CPU usage, FPS, memory consumption, and system information through an easy-to-use overlay view.
 
@@ -247,4 +277,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues, questions, or feature requests, please [create an issue](https://github.com/nazar-41/PerformanceKit/issues) on GitHub.
-```
