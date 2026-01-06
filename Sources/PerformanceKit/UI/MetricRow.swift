@@ -8,12 +8,24 @@
 
 import SwiftUI
 
-/// Displays a single performance metric with icon, label, and value
+/// A row component for displaying a single performance metric.
+///
+/// Used internally by `PerformanceOverlayView` to display individual
+/// performance metrics with consistent styling.
 struct MetricRow: View {
+    /// The SF Symbol name for the metric icon.
     let icon: String
+    
+    /// The label describing the metric.
     let label: String
+    
+    /// The formatted value of the metric.
     let value: String
+    
+    /// The color indicating the metric's status (good/warning/bad).
     let color: Color
+    
+    /// The text color for the row.
     let textColor: Color
     
     var body: some View {

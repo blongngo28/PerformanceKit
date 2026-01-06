@@ -8,10 +8,18 @@
 
 import SwiftUI
 
-/// Displays informational text with an icon
+/// A row component for displaying informational text.
+///
+/// Used internally by `PerformanceOverlayView` to display
+/// system and application information.
 struct InfoRow: View {
+    /// The SF Symbol name for the information icon.
     let icon: String
+    
+    /// The informational text to display.
     let text: String
+    
+    /// The text color for the row.
     let textColor: Color
     
     var body: some View {
